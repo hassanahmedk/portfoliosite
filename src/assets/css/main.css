@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+:root {
+  --primary-bg: #eaeaea;
+  --primary-bg: #fdfdfd;
+  --secondary-bg: #f7f7f7;
+
+  --white:#f7f7f7;
+  --black:#010203;
+  --green-lt:#52C39D;
+  --green-dk:#456C5A;
+
+  --primary-font: 'Poppins', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+  --ternary-font: "Open Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--secondary-bg);
+  font-family: var(--primary-font);
+  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+a{
+  text-decoration: none;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 6.5fr;
+  height: 100vh;
+}
+
+#landing {
+  background-color: var(--primary-bg);
+  overflow: scroll;
+  border-radius: 4rem 0 0 4rem;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#landing::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#landing, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+
+
+
+

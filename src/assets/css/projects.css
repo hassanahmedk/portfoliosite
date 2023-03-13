@@ -1,0 +1,136 @@
+.landing-projects{
+
+}
+
+#project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start;
+  justify-content: center;
+  gap: 4rem 1rem;
+  margin: 2rem 1rem;
+}
+
+.project-card {
+  display: flex;
+  min-height: 300px;
+  max-height: 300px;
+  user-select: none;
+}
+
+.card-main {
+  cursor: pointer;
+  background-color: rgb(245, 237, 227);
+
+  width: 400px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  transition: 0.2s all;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card-side {
+  position: relative;
+  width: 60px;
+  margin-left: auto;
+  left: -60px;
+  transition: 0.2s left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.card-side-icon {
+  font-size: 2.2rem !important;
+}
+
+
+.card-head {
+  position: relative;
+  transition: all 0.3s;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.card-head > div {
+  position: absolute;
+}
+
+.card-head-img {
+  width: 100%;
+  height: 100%;
+
+
+  background-size: cover;
+  filter: blur(2px) brightness(70%);
+  transition: 0.3s all;
+}
+
+.tonoter-head {
+  background-image: linear-gradient(-62deg, #fbac7eaa 0%, #f7cf68aa 100%),
+    url("../images/project-thumbnails/tonoter.png");
+}
+
+.weatherapp-head {
+  background-image:linear-gradient(-62deg, #0093E9aa 0%, #80D0C7aa 100%),
+    url("../images/project-thumbnails/weather.png");
+}
+
+.card-head-text {
+  width: 100%;
+  height: 15%;
+  align-self: end;
+  font-size: 1.6rem;
+  margin: 1rem 0.5rem;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-main:hover ~ .card-side {
+  left: 0px;
+}
+
+.card-side:hover {
+  left: 0px;
+}
+
+.card-main:hover .card-head {
+  height: 155%;
+}
+
+.card-main:hover .card-head-img {
+  filter: blur(0.5px);
+}
+
+/* .card-main:hover .card-body{
+  display: none;
+} */
+
+.card-body {
+  transition: 0.2s all;
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: -1;
+}
+
+.card-body-heading {
+  font-size: 1.2rem;
+}
+.card-body-desc {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}

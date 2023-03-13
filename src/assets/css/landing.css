@@ -1,0 +1,19 @@
+
+
+.landing-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+
+/* Landing About */
+
+/* .landing-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} */

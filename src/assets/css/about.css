@@ -1,0 +1,154 @@
+#about {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    height: 100vh;
+}
+
+
+
+.about-top{
+    display: flex;
+    position: relative;
+    padding: 3.5% 9% 0 9%
+}
+
+.about-picture{
+    position: relative;
+}
+
+.about-picture-container{
+    height: 260px;
+    width: 240px;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);
+    position: relative;
+    z-index: 1;
+    top: 3.6rem;
+}
+
+.about-picture img{
+    z-index: 2;
+    width: 130%;
+    position: relative;
+    bottom: 20%;
+    right: 16%;
+}
+
+.about-name{
+    padding: 4.2% 4% 2% 4% ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    gap: 1.3rem;
+    justify-content: start;
+    align-items: start;
+    font-weight: 600;
+}
+
+.about-name-top{
+    font-size: 2rem;
+    /* font-weight: 500; */
+}
+.about-name-mid{
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: var(--green-dk);
+    background: radial-gradient(circle at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.about-name-bottom{
+    font-size: 2.8rem;
+    /* font-weight: 500; */
+    
+}
+
+
+.about-name-bottom span{
+    color: var(--green-lt);
+}
+
+
+
+
+.about-bottom{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+
+.about-skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-tagline{
+    margin: 0 0 1rem 8.2rem;
+    font-weight: 600;
+}
+
+.about-tagline-first{
+    color: #52C39D;
+}
+.about-tagline-second{
+    color: #1baa7a;
+
+}
+.about-tagline-third{
+    color: #54816c;
+}
+
+
+
+.about-skills-heading{
+    color: var(--green-dk);
+
+}
+
+.about-skills-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem 0.3rem;
+    flex-wrap: wrap;
+    margin-left: 9.3rem;
+    justify-content: center;
+    font-weight: 600;
+}
+/* background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%); */
+
+.about-desc{
+    width: 75%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 2rem 0 0 2.5rem;
+}
+
+.about-desc span{
+    color: var(--green-lt);
+}
+
+
+.about-button{
+    background: #1bab7a;
+    padding: 0.6rem 0.4rem 0.6rem 1rem;
+    font-size: 1.1rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid rgba(0,0,0,0);
+    margin-top: 3rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-button:hover{
+    border: 2px solid var(--green-dk);
+    background: var(--white);
+    cursor: pointer;
+    color: #1baa7a;
+}
