@@ -1,18 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 import SkillChips from "./SkillChips";
-import SkillChipsJoy from "./SkillChipsJoy";
-
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import "../../assets/css/about.css";
 
 import profilePic from "../../assets/images/profile-pic-1-transparent.png";
+import blobSVG from "../../assets/images/blob.svg";
+import blobSVG2 from "../../assets/images/blob-2.svg";
+
 
 function About() {
   return (
     <div id="about">
+      <img src={blobSVG} className="blob blob-1" alt="" />
+      <img src={blobSVG2} className="blob blob-2" alt="" />
       <div className="about-top">
         <div className="about-picture">
           <div className="about-picture-container">
@@ -40,8 +43,16 @@ function About() {
           <br />I stand on a sweet spot where <span>design</span> and{" "}
           <span>code</span> intersects.
           <div className="about-buttons">
-            <button className="about-button about-button-1">Projects <ChevronRightIcon/> </button>
-            <button className="about-button about-button-2">Projects <ChevronRightIcon/> </button>
+            <Link to="services">
+              <button className="about-button about-button-1">
+                Services <ChevronRightIcon />
+              </button>
+            </Link>
+            <Link to="portfolio">
+              <button className="about-button about-button-2">
+                Projects <ChevronRightIcon />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

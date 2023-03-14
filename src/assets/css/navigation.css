@@ -3,7 +3,8 @@
   grid-template-rows: 1fr 4fr 1fr;
   padding: 1rem 0;
   background-color: var(--secondary-bg);
-
+  position: relative;
+  z-index: 2;
   /* From https://css.glass */
   /*
 background: rgba(255, 255, 255, 0.2);

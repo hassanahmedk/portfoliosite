@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   align-self: start;
   justify-content: center;
-  gap: 4rem 1rem;
+  gap: 1rem 1rem;
   margin: 2rem 1rem;
 }
 
@@ -30,7 +30,7 @@
   display: grid;
   grid-template-rows: 2fr 1fr;
   transition: 0.2s all;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
 }
 
 .card-side {
@@ -105,11 +105,12 @@
   left: 0px;
 }
 
-.card-main:hover .card-head {
+
+.project-card:hover .card-head {
   height: 155%;
 }
 
-.card-main:hover .card-head-img {
+.project-card:hover .card-head-img {
   filter: blur(0.5px);
 }
 
@@ -125,6 +126,8 @@
   justify-content: space-evenly;
   position: relative;
   z-index: -1;
+  background: #f1f1f1;
+  border: 1px solid #10101015;
 }
 
 .card-body-heading {
