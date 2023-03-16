@@ -1,38 +1,60 @@
 import React from "react";
 
-import LanguageIcon from "@mui/icons-material/Language";
+import IosShareIcon from "@mui/icons-material/IosShare";
+import LinkIcon from "@mui/icons-material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import ProjectIcon from "./ProjectIcon";
-
+import ProjectChips from "./ProjectChips";
 
 function ProjectCard(props) {
-
-
   return (
     <div className="project-card">
       <div className="card-main">
         <div className="card-head">
           <div className={"card-head-img " + props.projectClass}></div>
           <div className="card-head-text">
-            <ProjectIcon projectClass={props.projectClass} />
+            <ProjectIcon projectClass={props.projectClass} sideClass={props.sideClass} />
             {props.title}
           </div>
           {/* <img className="" src={tonoterImg} alt="" /> */}
         </div>
-        <div className="card-body">
-          <div className="card-body-heading">{props.tagline}</div>
+        <div className={"card-body " + props.projectClass}>
+          <div className={"card-body-heading " + props.projectClass}>
+            {props.tagline}
+          </div>
           <div className="card-body-desc">{props.desc}</div>
+          <div className="card-body-chips">
+            <ProjectChips projectClass={props.projectClass} sideClass={props.sideClass} />
+          </div>
         </div>
       </div>
       <div className={"card-side " + props.projectClass}>
         <a href="#projects">
-          <LanguageIcon sx={{ color: "#4078c0" }} className="card-side-icon" />
+          <IosShareIcon
+            sx={{
+              size: "0.7rem",
+              color: "rgba(10,10,10,0.4)",
+              "&:hover": {
+                color: "rgba(10,10,10,0.6)",
+              },
+            }}
+            className="card-side-icon"
+          />
         </a>
         <a href="#projects">
-          <GitHubIcon sx={{ color: "#333" }} className="card-side-icon" />
+          <GitHubIcon
+            sx={{
+              size: "0.7rem",
+              color: "rgba(10,10,10,0.4)",
+              "&:hover": {
+                color: "rgba(10,10,10,0.6)",
+              },
+            }}
+            className="card-side-icon"
+          />
         </a>
       </div>
     </div>

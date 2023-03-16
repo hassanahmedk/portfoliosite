@@ -20,12 +20,12 @@ function SkillChips() {
             />
             <Chip
               label="Node js"
-              sx={{ backgroundColor: "#D7F5DD", color: "#0F5D26" }}
-              color="success"
+              
+              sx={{ backgroundColor: "#FFF8C5", color: "#4D2D00" }}
             />
             <Chip
               label="MongoDB"
-              sx={{ backgroundColor: "#FFF8C5", color: "#4D2D00" }}
+              sx={{ backgroundColor: "#D7F5DD", color: "#0F5D26" }}
             />
             <Chip
               label="SQL"
