@@ -1,4 +1,3 @@
-import Picture from "./Navigation/Picture";
 import Tabs from "./Navigation/Tabs";
 import Social from "./Navigation/Social";
 import Logo from "./Navigation/Logo";

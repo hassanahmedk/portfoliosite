@@ -5,6 +5,8 @@
   background-color: var(--secondary-bg);
   position: relative;
   z-index: 2;
+
+  min-width: 260px;
   /* From https://css.glass */
   /*
 background: rgba(255, 255, 255, 0.2);

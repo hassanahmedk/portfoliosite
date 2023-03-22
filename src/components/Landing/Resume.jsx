@@ -1,14 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Resume() {
   return (
-    <div className="landing-about">
-        RESUME
-          specializing in building (and occassionally designing) <br /> exceptional
-          digital experiences through websites. Currently, I'm in my third year
-          of Software Engineering at National University of Sciences &
-          Technology (NUST)
-    </div>
+    <motion.div
+      className="landing-about"
+      initial={{ opacity: 0, y: "10%" }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: "100%", transition: { delay: 1 } }}
+    >
+      RESUME specializing in building (and occassionally designing) <br />{" "}
+      exceptional digital experiences through websites. Currently, I'm in my
+      third year of Software Engineering at National University of Sciences &
+      Technology (NUST)
+    </motion.div>
   );
 }
 

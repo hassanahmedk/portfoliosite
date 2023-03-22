@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 import SkillChips from "./SkillChips";
@@ -10,10 +12,14 @@ import profilePic from "../../assets/images/profile-pic-1-transparent.png";
 import blobSVG from "../../assets/images/blob.svg";
 import blobSVG2 from "../../assets/images/blob-2.svg";
 
-
 function About() {
   return (
-    <div id="about">
+    <motion.div
+      id="about"
+      initial={{ opacity: 0, y:"10%" }}
+      animate={{ opacity:1, y:0}}
+      exit={{ opacity: 0, y:"100%", transition: { delay:1 } }}
+    >
       <img src={blobSVG} className="blob blob-1" alt="" />
       <img src={blobSVG2} className="blob blob-2" alt="" />
       <div className="about-top">
@@ -56,7 +62,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

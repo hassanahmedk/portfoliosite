@@ -1,12 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { motion } from "framer-motion";
+
 import "../../assets/css/projects.css";
 
 import ProjectCard from "../Projects/ProjectCard";
 
 function Portfolio() {
   return (
-    <div className="landing-section landing-projects">
+    <motion.div
+      className="landing-section landing-projects"
+      initial={{ opacity: 0, y:"10%" }}
+      animate={{ opacity:1, y:0}}
+      exit={{ opacity: 0, y:"100%", transition: { delay:1 } }}
+    >
       <div id="project-cards">
         <ProjectCard
           title="ToManage"
@@ -75,7 +82,7 @@ function Portfolio() {
           sideClass="tonoter-side"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
