@@ -16,9 +16,15 @@ function About() {
   return (
     <motion.div
       id="about"
-      initial={{ opacity: 0, y:"10%" }}
-      animate={{ opacity:1, y:0}}
-      exit={{ opacity: 0, y:"100%", transition: { delay:1 } }}
+      initial={{ opacity: 0, y: "10%" }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{
+        opacity: 0,
+        y: 0,
+        x: { type: "spring", stiffness: 100 },
+        duration: 0.8,
+        delay: 0.2,
+      }}
     >
       <img src={blobSVG} className="blob blob-1" alt="" />
       <img src={blobSVG2} className="blob blob-2" alt="" />

@@ -22,12 +22,6 @@ function Landing() {
         <Route path="/resume" element={<Resume />} />
       </Routes>
       </AnimatePresence>
-      <script
-        src="https://static.elfsight.com/platform/platform.js"
-        data-use-service-core
-        defer
-      ></script>
-      <div class="elfsight-app-14e66b26-e4a6-4636-b2ac-0411a7bfb747"></div>
     </div>
   );
 }

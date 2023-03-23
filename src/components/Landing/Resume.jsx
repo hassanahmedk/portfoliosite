@@ -7,7 +7,7 @@ function Resume() {
       className="landing-about"
       initial={{ opacity: 0, y: "10%" }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: "100%", transition: { delay: 1 } }}
+      exit={{ opacity: 0, y: 0, transition: { delay: 0 } }}
     >
       RESUME specializing in building (and occassionally designing) <br />{" "}
       exceptional digital experiences through websites. Currently, I'm in my

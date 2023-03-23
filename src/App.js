@@ -29,24 +29,25 @@ function App() {
 
     document.body.appendChild(script);
 
+
     return () => {
       document.body.removeChild(script);
+      loadLocalJS();
     };
   }, []);
-  useEffect(() => {
-    const script = document.createElement("script");
 
-    script.type="text/javascript";
+  function loadLocalJS(){
+
+    const scriptLocal = document.createElement("script");
+
+    scriptLocal.type="text/javascript";
   
-    script.src = "index.js";
+    scriptLocal.src = "index.js";
 
 
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+    document.body.appendChild(scriptLocal);
+  }
+ 
 
   return (
     <div className="App">

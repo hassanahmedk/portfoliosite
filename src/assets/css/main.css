@@ -61,6 +61,35 @@ body {
   background-color: #f7f7f7;
 }
 
+
+
+.css-i9v1sr-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected,
+.css-oezmw6-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
+  background-color: #01020310;
+}
+
+
+.MuiBottomNavigationAction-label{
+  font-size: 0.7rem!important;
+}
+
+
+
+
+#hubspot-messages-iframe-container.widget-align-right{
+  bottom: 10%!important;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+
+
+/* #hubspot-messages-iframe-container .hs-shadow-container.active{
+  transform: translateY(40px);
+  
+
+} */
+
+
 @media (max-width: 780px) {
   #navigation {
     display: none;
@@ -76,24 +105,10 @@ body {
   }
 }
 
-.css-i9v1sr-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected,
-.css-oezmw6-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
-  background-color: #01020310;
-}
-
-
-.MuiBottomNavigationAction-label{
-  font-size: 0.7rem!important;
-}
-
-
-
-#hubspot-conversations-iframe{
-  transform: translateY(-20px);
-}
-
-/* #hubspot-messages-iframe-container .hs-shadow-container.active{
-  transform: translateY(40px);
+@media (max-width: 480px) {
   
-
-} */
+  #hubspot-messages-iframe-container iframe#hubspot-conversations-iframe{
+    height: 90%!important;
+  
+  }
+}

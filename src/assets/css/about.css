@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: 1fr 2fr;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .about-top {
@@ -173,7 +174,7 @@
   position: absolute;
   opacity: 0.6;
   z-index: 0;
-  display: none;
+ 
 }
 .blob-1 {
   top: 2rem;
@@ -198,6 +199,10 @@
 
   .about-desc {
     font-size: 1.1rem;
+  }
+
+  .blob-2{
+    width: 40%;
   }
 }
 
@@ -276,9 +281,19 @@
   .about-skills{
     margin-bottom: 8rem;
   }
+
+  .blob-1{
+    top: 15%;
+    width: 160%;
+    right: 25%;
+  }
 }
 
 
 @media (max-width: 450px) {
-
+  .blob-2{
+    bottom: -85%;
+    width: 100%;
+    right: -15%;
+  }
 }
