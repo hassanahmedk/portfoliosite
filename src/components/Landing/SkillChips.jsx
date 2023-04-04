@@ -72,8 +72,10 @@ function SkillChips() {
               color="success"
             />
           </Stack>
+
+          
         </div>
   )
 }
 
-export default SkillChips
+export default SkillChips;

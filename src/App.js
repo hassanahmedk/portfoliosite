@@ -21,14 +21,13 @@ function App() {
   useEffect(() => {
     const script = document.createElement("script");
 
-    script.type="text/javascript";
-    script.id="hs-script-loader";
+    script.type = "text/javascript";
+    script.id = "hs-script-loader";
     script.src = "https://js-na1.hs-scripts.com/24291951.js";
-    script.async = true; 
+    script.async = true;
     script.defer = true;
 
     document.body.appendChild(script);
-
 
     return () => {
       document.body.removeChild(script);
@@ -36,36 +35,28 @@ function App() {
     };
   }, []);
 
-  function loadLocalJS(){
-
+  function loadLocalJS() {
     const scriptLocal = document.createElement("script");
 
-    scriptLocal.type="text/javascript";
-  
-    scriptLocal.src = "index.js";
+    scriptLocal.type = "text/javascript";
 
+    scriptLocal.src = "index.js";
 
     document.body.appendChild(scriptLocal);
   }
- 
 
   return (
     <div className="App">
       <BrowserRouter>
         <ThemeProvider theme={theme}>
-          <Main />
+            <Main />
         </ThemeProvider>
       </BrowserRouter>
-   
-    
-
     </div>
-
   );
 }
 
 export default App;
-
 
 /* 
 

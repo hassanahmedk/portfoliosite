@@ -5,6 +5,7 @@ import MobileBottomNavigation from "./Navigation/MobileBottomNavigation";
 function Main() {
   return (
     <div id="main">
+
       <MobileBottomNavigation />
       <Navigation />
       <Landing />

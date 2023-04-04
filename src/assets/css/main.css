@@ -18,9 +18,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 body {
-  background-color: var(--secondary-bg);
+  background: var(--secondary-bg);
   font-family: var(--primary-font);
   overflow: hidden;
   /* overflow: hidden; */
@@ -31,14 +32,16 @@ a {
 }
 
 #main {
+  /* background-image: url("../images//site-bg.svg"); */
   display: grid;
   grid-template-columns: 1fr 6.5fr;
   height: 100vh;
 }
 
 #landing {
-  background-color: var(--primary-bg);
+  background-color: #fdfdfd;
   overflow: scroll;
+
   border-radius: 4rem 0 0 4rem;
 }
 
@@ -61,27 +64,14 @@ body {
   background-color: #f7f7f7;
 }
 
-
-
 .css-i9v1sr-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected,
 .css-oezmw6-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
   background-color: #01020310;
 }
 
-
-.MuiBottomNavigationAction-label{
-  font-size: 0.7rem!important;
+.MuiBottomNavigationAction-label {
+  font-size: 0.7rem !important;
 }
-
-
-
-
-#hubspot-messages-iframe-container.widget-align-right{
-  bottom: 10%!important;
-  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-}
-
-
 
 /* #hubspot-messages-iframe-container .hs-shadow-container.active{
   transform: translateY(40px);
@@ -89,6 +79,14 @@ body {
 
 } */
 
+/* body:has(.services-grid-active:hover) #navigation{
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: none;
+}
+body:has(.services-grid-active:hover){
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: none;
+} */
 
 @media (max-width: 780px) {
   #navigation {
@@ -103,12 +101,30 @@ body {
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  #hubspot-messages-iframe-container.widget-align-right {
+    bottom: 8% !important;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  }
+
+  /* body {
+    background-color: #00000011;
+  } */
+
+  #landing {
+    /* background-color: #00000011; */
+    overflow: scroll;
+
+    border-radius: 4rem 0 0 4rem;
+  }
+
+  /* #main {
+    background-image: url("../images//site-bg.svg");
+  } */
 }
 
 @media (max-width: 480px) {
-  
-  #hubspot-messages-iframe-container iframe#hubspot-conversations-iframe{
-    height: 90%!important;
-  
+  #hubspot-messages-iframe-container iframe#hubspot-conversations-iframe {
+    height: 92% !important;
   }
 }

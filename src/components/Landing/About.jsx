@@ -1,6 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
+import { mobileNavContext } from "../Navigation/MobileBottomNavigation";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
@@ -13,6 +15,8 @@ import blobSVG from "../../assets/images/blob.svg";
 import blobSVG2 from "../../assets/images/blob-2.svg";
 
 function About() {
+  const [currentPage, setCurrentPage] = useState(0);
+
   return (
     <motion.div
       id="about"
