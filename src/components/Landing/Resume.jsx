@@ -6,9 +6,10 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import "../../assets/css/resume.css";
 import resumeSVG from "../../assets/images/resume-illus.svg";
 
-import resume from "../../assets/resume/resume.pdf";
+import resume from "../../assets/resume/Resume-HassanAhmedKhan.pdf";
 
 function Resume() {
+
   return (
     <motion.div
       className="landing-resume"

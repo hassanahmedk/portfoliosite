@@ -143,6 +143,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);*/
 }
 
 .nav-social-icon {
+  color: var(--black);
   opacity: 0.4;
   cursor: pointer;
   font-size: 1.8rem !important;
