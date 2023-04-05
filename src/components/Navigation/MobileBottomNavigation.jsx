@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
+// import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import ViewArrayRoundedIcon from "@mui/icons-material/ViewArrayRounded";
 import ArticleIcon from "@mui/icons-material/Article";
 import BallotIcon from "@mui/icons-material/Ballot";
 import Paper from "@mui/material/Paper";
+
+import bottomNavSVGs from "../../assets/icons/bottom-nav-svg";
 
 export default function MobileBottomNavigation() {
   const location = useLocation();
@@ -52,7 +54,13 @@ export default function MobileBottomNavigation() {
           component={Link}
           to="/"
           label="Home"
-          icon={<AccountCircleRoundedIcon />}
+          icon={
+            value === 0 ? (
+              bottomNavSVGs.homeActive
+              ) : (
+              bottomNavSVGs.home
+            )
+          }
           sx={{
             fontFamily: "var(--primary-font)",
 
@@ -64,21 +72,39 @@ export default function MobileBottomNavigation() {
           component={Link}
           to="/portfolio"
           label="Projects"
-          icon={<ViewArrayRoundedIcon />}
+          icon={
+            value === 1 ? (
+              bottomNavSVGs.projectsActive
+              ) : (
+              bottomNavSVGs.projects
+            )
+          }
         />
 
         <BottomNavigationAction
           component={Link}
           to="/services"
           label="Services"
-          icon={<ArticleIcon />}
+          icon={
+            value === 2 ? (
+              bottomNavSVGs.servicesActive
+              ) : (
+              bottomNavSVGs.services
+            )
+          }
         />
 
         <BottomNavigationAction
           component={Link}
           to="/resume"
           label="Resume"
-          icon={<BallotIcon />}
+          icon={
+            value === 3 ? (
+              bottomNavSVGs.resumeActive
+              ) : (
+              bottomNavSVGs.resume
+            )
+          }
         />
       </BottomNavigation>
     </Paper>

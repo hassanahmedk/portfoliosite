@@ -120,7 +120,7 @@ span.dark {
   color: #fff;
   grid-row: 1 / span 3;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .grid-1 div {
@@ -152,7 +152,7 @@ span.dark {
   margin: 1rem 0;
   margin-right: auto;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 /* .grid-2:hover{
   z-index: 6;
