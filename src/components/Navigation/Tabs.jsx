@@ -19,25 +19,25 @@ function Tabs() {
   console.log(currentPage);
 
   let lineStyle = {
-    top:"15.2%",
+    top:"16%",
   }
 
   switch(currentPage){
     case "/":
-      lineStyle.top="14.5%";
+      lineStyle.top="16%";
       break;
     case "/services":
-      lineStyle.top="33.3%";
+      lineStyle.top="30%";
       break;
       case "/portfolio":
-      lineStyle.top="52%";
+      lineStyle.top="44%";
       break;
       case "/resume":
-      lineStyle.top="71%";
+      lineStyle.top="57.5%";
       break;
 
     default:
-      lineStyle.top="15.2%";
+      lineStyle.top="16%";
       break;
   }
 
