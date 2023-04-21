@@ -27,6 +27,8 @@ function Portfolio() {
           desc="ToManage aims to provide all the task management apps under a single hood. Currently offering ToNoter and ToDoer"
           projectClass="tomanage-head"
           sideClass="tonoter-side"
+          siteLink="https://tomanage.vercel.app"
+          githubLink="https://github.com/mrund3ad1/tomanage"
         />
         <ProjectCard
           title="ToNoter"
@@ -34,6 +36,8 @@ function Portfolio() {
           desc="ToNoter lets you organize your thoughts and plans, and simplify your life by simplifying your notes-taking process."
           projectClass="tonoter-head"
           sideClass="tonoter-side"
+          siteLink="https://tonoter.vercel.app"
+          githubLink="https://github.com/mrund3ad1/to-noter"
         />
         <ProjectCard
           title="ToDoer"
@@ -41,6 +45,8 @@ function Portfolio() {
           desc="ToDoer is the perfect tool to help you stay on top of your daily tasks and accomplish your goals through a minimalistic To Do List."
           projectClass="todoer-head"
           sideClass="todoer-side"
+          siteLink="https://todoer.vercel.app"
+          githubLink="https://github.com/mrund3ad1/ToDoList"
         />
         <ProjectCard
           title="ToNoter API"
@@ -48,6 +54,8 @@ function Portfolio() {
           desc="Hosted on Amazon AWS Serverless functions using Vercel, this RESTful API provides backend and database to the ToNoter website."
           projectClass="tonoter-head tonoter-API-head"
           sideClass="tonoter-api"
+          siteLink="false"
+          githubLink="https://github.com/mrund3ad1/tonoter-backend"
         />
         <ProjectCard
           title="Weather App"
@@ -55,6 +63,8 @@ function Portfolio() {
           desc="A simple weather app allowing user to fetch Weather conditions of any city in any format using OpenWeather API"
           projectClass="weatherapp-head"
           sideClass="weatherapp-side"
+          siteLink="false"
+          githubLink="https://github.com/mrund3ad1/weather-app"
         />
         <ProjectCard
           title="Student Dashboard"
@@ -63,6 +73,8 @@ function Portfolio() {
               culpa, distinctio minima accusantium excepturi consequuntur"
           projectClass="student-head"
           sideClass="student-side"
+          siteLink="false"
+          githubLink="false"
         />
         <ProjectCard
           title="OS Paging Simulator"
@@ -70,22 +82,8 @@ function Portfolio() {
           desc="Paging simulator, takes frame size and processes, and shows how they'd mapped in pages of RAM in operating system"
           projectClass="os-head"
           sideClass="os-side"
-        />
-        <ProjectCard
-          title="To Noter"
-          tagline="Saves you time and energy"
-          desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-              culpa, distinctio minima accusantium excepturi consequuntur"
-          projectClass="tonoter-head"
-          sideClass="tonoter-side"
-        />
-        <ProjectCard
-          title="To Noter"
-          tagline="Saves you time and energy"
-          desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-              culpa, distinctio minima accusantium excepturi consequuntur"
-          projectClass="tonoter-head"
-          sideClass="tonoter-side"
+          siteLink="https://os-paging-hassan.vercel.app/"
+          githubLink="https://github.com/mrund3ad1/os-paging"
         />
       </div>
     </motion.div>
