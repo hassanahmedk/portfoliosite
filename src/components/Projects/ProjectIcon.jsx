@@ -9,7 +9,8 @@ import ApiIcon from '@mui/icons-material/Api';
 
 import DashboardIcon from '@mui/icons-material/Dashboard'
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import FlightIcon from '@mui/icons-material/Flight';
 
 import tomanageLogo from "../../assets/images/project-logos/tomanage-logo.png";
 import tomanage from "../../assets/images/project-logos/tomanage.png";
@@ -36,6 +37,10 @@ function ProjectIcon(props) {
     return <DashboardIcon className="project-logo" />;
   } else if (props.projectClass === "os-head") {
     return <SettingsSuggestIcon className="project-logo" />;
+  } else if (props.projectClass === "portfolio-head"){
+    return <AccountCircleIcon />
+  } else if (props.projectClass === "flightaxisapi-head"){
+    return <FlightIcon />
   }
 
   

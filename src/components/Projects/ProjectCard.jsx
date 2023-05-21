@@ -9,6 +9,11 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ProjectIcon from "./ProjectIcon";
 import ProjectChips from "./ProjectChips";
 
+import websiteIcon from "../../assets/icons/website.svg";
+import githubIcon from "../../assets/icons/github.svg";
+import figmaIcon from "../../assets/icons/figma.png";
+import dribbbleIcon from "../../assets/icons/dribbble.png";
+
 function ProjectCard(props) {
   return (
     <div className="project-card">
@@ -39,35 +44,67 @@ function ProjectCard(props) {
       </div>
       <div className={"card-side " + props.projectClass}>
         {
-          props.siteLink !== "false" &&
-          <a href={props.siteLink} target="_blank" rel="noreferrer">
-            <IosShareIcon
-              sx={{
-                size: "0.7rem",
-                color: "rgba(10,10,10,0.4)",
-                "&:hover": {
-                  color: "rgba(10,10,10,0.6)",
-                },
+        props.projectType==="develop" &&
+        props.siteLink !== "false" && (
+          <a href={props.siteLink} target="_blank" rel="noreferrer" style={{cursor:"pointer"}}>
+            <img
+              src={websiteIcon}
+              style={{
+  
               }}
               className="card-side-icon"
+              alt=""
             />
           </a>
-        }
+        )}
         {
-          props.githubLink !== "false" &&
-        <a href={props.githubLink} target="_blank" rel="noreferrer">
-          <GitHubIcon
-            sx={{
-              size: "0.7rem",
-              color: "rgba(10,10,10,0.4)",
-              "&:hover": {
-                color: "rgba(10,10,10,0.6)",
-              },
-            }}
-            className="card-side-icon"
-          />
-        </a>
-        }
+        props.projectType==="develop" &&
+        props.githubLink !== "false" && (
+          <a href={props.githubLink} target="_blank" rel="noreferrer" style={{cursor:"pointer"}}>
+            <img
+              src={githubIcon}
+              style={{
+    
+                width:"34px",
+                height:"34px",
+              }}
+              className="card-side-icon"
+              alt=""
+            />
+          </a>
+        )}
+        {
+        props.projectType==="design" &&
+        props.dribbbleLink !== "false" && (
+          <a href={props.dribbbleLink} target="_blank" rel="noreferrer" style={{cursor:"pointer"}}>
+            <img
+              src={dribbbleIcon}
+              style={{
+    
+                width:"34px",
+                height:"34px",
+              }}
+              className="card-side-icon"
+              alt=""
+            />
+          </a>
+        )}
+        {
+        props.projectType==="design" &&
+        props.figmaLink !== "false" && (
+          <a href={props.figmaLink} target="_blank" rel="noreferrer" style={{cursor:"pointer"}}>
+            <img
+              src={figmaIcon}
+              style={{
+    
+                width:"34px",
+                height:"34px",
+              }}
+              className="card-side-icon"
+              alt=""
+            />
+          </a>
+        )}
       </div>
     </div>
   );

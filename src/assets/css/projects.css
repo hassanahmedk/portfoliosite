@@ -1,7 +1,67 @@
-.landing-projects {
+.landing-section.landing-projects {
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
-#project-cards {
+.projects-top {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0 1rem 0;
+}
+
+.projects-text {
+  text-align: center;
+}
+
+.projects-text-heading {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.projects-text-heading > span {
+  padding: 0 0.4rem;
+}
+
+.projects-text-heading span.last {
+  color: #e3ffe7;
+  background-color: #21c68a;
+}
+.projects-text-heading span.first {
+  color: #21c68a;
+  background-color: #e3ffe7;
+}
+
+.projects-text-desc {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  margin: 2rem 15rem 0 15rem;
+}
+
+span.light {
+  color: #0dc6b4;
+}
+span.dark {
+  color: #52c39d;
+}
+
+.projects-category {
+  /* display: flex;
+  justify-content: center; */
+  margin-top: 2rem;
+  justify-self: center;
+}
+
+.project-cards-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-cards {
   display: flex;
   flex-wrap: wrap;
   align-self: start;
@@ -18,6 +78,10 @@
   user-select: none;
 }
 
+.project-card:last-child {
+  align-self: end;
+}
+
 .card-main {
   cursor: pointer;
   background-color: rgb(245, 237, 227);
@@ -26,7 +90,7 @@
   position: relative;
   z-index: 2;
   overflow: hidden;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
   display: grid;
   grid-template-rows: 2fr 1fr;
   transition: 0.2s all;
@@ -44,10 +108,18 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 0;
+  border: 1px solid rgba(10, 10, 10, 0.1);
 }
 
 .card-side-icon {
-  font-size: 2.2rem !important;
+  width: 30px;
+  height: 30px;
+  opacity: 0.4;
+  transition: 0.2s all;
+}
+.card-side-icon:hover {
+  transform: scale(1.07);
+  opacity: 0.6;
 }
 
 .card-head {
@@ -73,17 +145,50 @@
   transition: 0.3s all;
 }
 
+/* .flightaxisapi-head {
+  background: radial-gradient(
+    circle at -5.9% 45.2%,
+    rgb(255, 124, 0) 0%,
+    rgb(255, 124, 0) 15.9%,
+    rgb(255, 163, 77) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgba(19, 30, 37, 0.6) 24.5%,
+    rgba(19, 30, 37, 0.6) 66%
+  ),
+  url("../images/project-thumbnails/portfolio.png");
+} */
+.flightaxisapi-head {
+  background: radial-gradient(
+      328px at 2.9% 15%,
+      rgba(191, 224, 251, 0.4) 0%,
+      rgba(232, 233, 251, 0.4) 25.8%,
+      rgba(252, 239, 250, 0.4) 50.8%,
+      rgba(234, 251, 251, 0.4) 77.6%,
+      rgba(240, 251, 244, 0.4) 100.7%
+    ),
+    url("../images/project-thumbnails/flightaxisapi.png");
+    color: #939bdc;
+}
+.student-head {
+  background: linear-gradient(to top, #c1dfc4aa 0%, #deecddaa 100%),
+  url("../images/project-thumbnails/student.png");
+  color: rgb(107, 224, 119)
+}
+.portfolio-head {
+  background-image: linear-gradient(315deg, #3ee57799 0%, #42fcdb99 74%),
+    url("../images/project-thumbnails/portfolio.png");
+  color: #21c68a;
+}
+.tonoter-head {
+  background-image: linear-gradient(-62deg, #fbac7eaa 0%, #f7cf68aa 100%),
+    url("../images/project-thumbnails/tonoter.png");
+  color: #d9763d;
+}
 .tomanage-head {
   background-image: linear-gradient(-62deg, #e3ffe788 0%, #d9e7ff88 100%),
     url("../images/project-thumbnails/landing-illus-1.png");
   background-size: cover;
   color: #6296f0;
-}
-
-.tonoter-head {
-  background-image: linear-gradient(-62deg, #fbac7eaa 0%, #f7cf68aa 100%),
-    url("../images/project-thumbnails/tonoter.png");
-  color: #d9763d;
 }
 
 .todoer-head {
@@ -102,26 +207,44 @@
   color: #058ddc;
 }
 
-
-.tonoter-API-head{
+.tonoter-API-head {
   background-image: linear-gradient(-62deg, #fbac7eaa 0%, #f7cf68aa 100%),
     url("../images/project-thumbnails/tonoter-api.png");
 }
 
-
-.os-head{
-  /* background-image: linear-gradient(-62deg, #f83600aa 0%, #f9d423aa 100%),
+.os-head {
+  background-image: linear-gradient(-60deg, #ff5858aa 0%, #f09819aa 100%),
     url("../images/project-thumbnails/os-paging.png");
-
-    background-image: linear-gradient(60deg, #abecd6aa 0%, #fbed96aa 100%),
-    url("../images/project-thumbnails/os-paging.png"); */
-
-
-    background-image: linear-gradient(-60deg, #ff5858aa 0%, #f09819aa 100%),
-    url("../images/project-thumbnails/os-paging.png");
-    color: #e18a11;
+  color: #e18a11;
 }
 
+
+
+/* Design */
+
+.monopoly-head {
+  
+  background-image: linear-gradient(-60deg, #ff5858aa 0%, #f09819aa 100%),
+    url("../images/project-thumbnails/monopoly.png");
+  color: #e18a11;
+}
+.weather-head {
+  
+  background: linear-gradient(120deg, #e0c3fcaa 0%, #8ec5fcaa 100%),
+    url("../images/project-thumbnails/weather-des.png");
+  color: #82c0ff;
+}
+.fempure-head {
+
+  background: radial-gradient(849px at 0.9% 2.8%, rgba(255, 157, 255,0.6) 0%, rgba(255, 102, 142,0.5) 43.4%, rgba(255, 31, 56,0.4) 83.1%),
+  url("../images/project-thumbnails/fempure.png");
+  color: rgba(255, 102, 142);
+}
+.vinco-head {
+  background: linear-gradient(60deg, #373b44aa, #4286f4aa),
+    url("../images/project-thumbnails/vinco.png");
+  color: #4286f4;
+}
 
 /* 
 
@@ -166,6 +289,9 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
 .project-card:hover .card-head-img {
   filter: blur(0.5px);
 }
+.project-card:hover .flightaxisapi-head.card-head-img {
+  scale: 1.2;
+}
 .project-card:hover .card-head-text {
   font-size: 1.6rem;
   font-weight: 600;
@@ -177,15 +303,34 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
 }
 
 
+/* Monopoly */
+.project-card:hover .flightaxisapi-head + .card-head-text {
+  color: #ACB1D6;
+  left: 43%;
+  bottom: 10%;
+}
+
+
+
 /* Heading while box is hovered */
-.project-card:hover .tomanage-head + .card-head-text {
-  left: 50%;
+.project-card:hover .flightaxisapi-head + .card-head-text {
+  color: #ACB1D6;
+  left: 43%;
+  bottom: 10%;
+}
+.project-card:hover .portfolio-head + .card-head-text {
+  color: rgb(243, 255, 247);
+  left: 32%;
   bottom: -3%;
-  color: #0094e977;
 }
 .project-card:hover .tonoter-head + .card-head-text {
   color: #fffbef;
   left: 55%;
+}
+.project-card:hover .tomanage-head + .card-head-text {
+  left: 50%;
+  bottom: -3%;
+  color: #0094e977;
 }
 .project-card:hover .weatherapp-head + .card-head-text {
   color: #dbeaff;
@@ -204,6 +349,35 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
   color: #ffe7c4;
   left: 23%;
 }
+.project-card:hover .student-head + .card-head-text {
+  color: #8cbc90;
+  left: 25%;
+}
+
+
+
+/* DESIGN */
+.project-card:hover .fempure-head + .card-head-text {
+  color: rgba(253, 86, 131, 0.793);
+  left: 30%;
+  bottom: 18%;
+}
+.project-card:hover .monopoly-head + .card-head-text {
+  color: #f3d8b2;
+  left: 22%;
+  bottom: 18%;
+}
+.project-card:hover .weather-head + .card-head-text {
+  color: #68b2fde4;
+  left: 30%;
+  bottom: 18%;
+}
+.project-card:hover .vinco-head + .card-head-text {
+  color: #bbd4fcaa;
+  left: 18%;
+  bottom: 18%;
+}
+
 
 /* .card-main:hover .card-body{
   display: none;
@@ -222,56 +396,78 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
 }
 
 
-/* Card body color */
-.card-body.tomanage-head{
-  background-image: linear-gradient(-62deg, #e3ffe788 0%, #d9e7ff88 100%);
-}
-.card-body.tonoter-head{
-  background-image: linear-gradient(-62deg, #fbac7e33 0%, #f7cf6815 100%);
-}
-.card-body.todoer-head{
-  background-image: linear-gradient(62deg, #4670b315 0%, #42c4ac33 100%);
-}
-.card-body.weatherapp-head{
-  background-image: linear-gradient(-62deg, #0093e925 0%, #80d0c734 100%);
-}
-.card-body.os-head{
-  background-image: linear-gradient(-60deg, #ff585825 0%, #f0981944 100%);
-}
-
-
-
 .card-body-heading {
   font-size: 1.2rem;
   background: none;
   font-weight: 500;
 }
 .card-body-desc {
-  color: rgba(10,10,10,0.6);
+  color: rgba(10, 10, 10, 0.6);
   font-size: 0.85rem;
   margin: 0.2rem 0.2rem 0.2rem 0.1rem;
   font-weight: 500;
   line-height: 1.6;
 }
-.card-body-desc span{
+.card-body-desc span {
   font-weight: 600;
 }
 
-
-.project-chips{
+.project-chips {
   display: flex;
   gap: 0.2rem;
   margin: 0.2rem 0;
 }
 
 
-@media (max-width:480px){
-  #project-cards{
+
+/* When a new project is added, following three things need to be added for colors */
+
+
+/* 1.  Card body color */
+.card-body.portfolio-head {
+  background-image: linear-gradient(315deg, #3ee57720 0%, #42fcdb20 74%);
+}
+.card-body.tonoter-head {
+  background-image: linear-gradient(-62deg, #fbac7e33 0%, #f7cf6815 100%);
+}
+.card-body.tomanage-head {
+  background-image: linear-gradient(-62deg, #e3ffe788 0%, #d9e7ff88 100%);
+}
+.card-body.flightaxisapi-head {
+  background: radial-gradient(
+      328px at 2.9% 15%,
+      rgba(191, 224, 251, 0.7) 0%,
+      rgba(232, 233, 251, 0.7) 25.8%,
+      rgba(252, 239, 250, 0.7) 50.8%,
+      rgba(234, 251, 251, 0.7) 77.6%,
+      rgba(240, 251, 244, 0.7) 100.7%
+    );
+}
+.card-body.todoer-head {
+  background-image: linear-gradient(62deg, #4670b315 0%, #42c4ac33 100%);
+}
+.card-body.weatherapp-head {
+  background-image: linear-gradient(-62deg, #0093e925 0%, #80d0c734 100%);
+}
+.card-body.student-head {
+  background: linear-gradient(to top, #c1dfc466 0%, #deecdd66 100%);
+}
+.card-body.os-head {
+  background-image: linear-gradient(-60deg, #ff585825 0%, #f0981944 100%);
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .project-cards {
     gap: 0;
     margin: 0;
   }
-  
-  .project-card{
+
+  .project-card {
     scale: 0.85;
     user-select: none;
     margin-bottom: -6%;
@@ -281,10 +477,10 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
     font-size: 1.9rem;
   }
 
-  .card-body-heading{
+  .card-body-heading {
     font-size: 1.4rem;
   }
-  .card-body-desc{
+  .card-body-desc {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
   }
@@ -293,20 +489,12 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
     height: 245%;
   }
 
-
   .project-card:hover .card-head-text {
     font-size: 1.65rem;
   }
-  
-
-
 }
-@media (max-width:400px){
-  #project-cards{
-    gap: 0;
-  }
-  
-  .project-card{
+@media (max-width: 400px) {
+  .project-card {
     scale: 0.75;
     user-select: none;
     margin-bottom: -14%;
@@ -316,10 +504,10 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
     bottom: 1%;
   }
 
-  .card-body-heading{
+  .card-body-heading {
     font-size: 1.42rem;
   }
-  .card-body-desc{
+  .card-body-desc {
     font-size: 0.98rem;
     margin-bottom: 0.5rem;
   }
@@ -327,17 +515,11 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
   .project-card:hover .card-head {
     height: 250%;
   }
-
 }
-@media (max-width:355px){
-  #project-cards{
-    gap: 0;
-  }
-  
-  .project-card{
+@media (max-width: 355px) {
+  .project-card {
     scale: 0.7;
     user-select: none;
     margin-bottom: -16%;
   }
-
 }

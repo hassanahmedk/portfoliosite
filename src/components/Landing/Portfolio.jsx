@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import "../../assets/css/projects.css";
 
 import ProjectCard from "../Projects/ProjectCard";
+import { desProjects, devProjects } from "../../assets/projects/projects";
+import ProjectCategory from "../Projects/ProjectCategory";
 
 function Portfolio() {
+  let [categorySelected, setCategorySelected] = useState("dev")
   return (
     <motion.div
       className="landing-section landing-projects"
@@ -20,72 +23,61 @@ function Portfolio() {
         delay: 0.1,
       }}
     >
-      <div id="project-cards">
-        <ProjectCard
-          title="ToManage"
-          tagline="Revolutionize your management"
-          desc="ToManage aims to provide all the task management apps under a single hood. Currently offering ToNoter and ToDoer"
-          projectClass="tomanage-head"
-          sideClass="tonoter-side"
-          siteLink="https://tomanage.vercel.app"
-          githubLink="https://github.com/mrund3ad1/tomanage"
-        />
-        <ProjectCard
-          title="ToNoter"
-          tagline="Notes-taking made easy"
-          desc="ToNoter lets you organize your thoughts and plans, and simplify your life by simplifying your notes-taking process."
-          projectClass="tonoter-head"
-          sideClass="tonoter-side"
-          siteLink="https://tonoter.vercel.app"
-          githubLink="https://github.com/mrund3ad1/to-noter"
-        />
-        <ProjectCard
-          title="ToDoer"
-          tagline="A minimalistic todo list"
-          desc="ToDoer is the perfect tool to help you stay on top of your daily tasks and accomplish your goals through a minimalistic To Do List."
-          projectClass="todoer-head"
-          sideClass="todoer-side"
-          siteLink="https://todoer.vercel.app"
-          githubLink="https://github.com/mrund3ad1/ToDoList"
-        />
-        <ProjectCard
-          title="ToNoter API"
-          tagline="RESTful API for ToNoter"
-          desc="Hosted on Amazon AWS Serverless functions using Vercel, this RESTful API provides backend and database to the ToNoter website."
-          projectClass="tonoter-head tonoter-API-head"
-          sideClass="tonoter-api"
-          siteLink="false"
-          githubLink="https://github.com/mrund3ad1/tonoter-backend"
-        />
-        <ProjectCard
-          title="Weather App"
-          tagline="Minimalistic weather app"
-          desc="A simple weather app allowing user to fetch Weather conditions of any city in any format using OpenWeather API"
-          projectClass="weatherapp-head"
-          sideClass="weatherapp-side"
-          siteLink="false"
-          githubLink="https://github.com/mrund3ad1/weather-app"
-        />
-        <ProjectCard
-          title="Student Dashboard"
-          tagline="Saves you time and energy"
-          desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-              culpa, distinctio minima accusantium excepturi consequuntur"
-          projectClass="student-head"
-          sideClass="student-side"
-          siteLink="false"
-          githubLink="false"
-        />
-        <ProjectCard
-          title="OS Paging Simulator"
-          tagline="Memory Management Module"
-          desc="Paging simulator, takes frame size and processes, and shows how they'd mapped in pages of RAM in operating system"
-          projectClass="os-head"
-          sideClass="os-side"
-          siteLink="https://os-paging-hassan.vercel.app/"
-          githubLink="https://github.com/mrund3ad1/os-paging"
-        />
+      <div className="projects-top">
+        <div className="projects-text">
+          <div className="projects-text-heading">
+            <span className="first">Projects</span>
+            <span className="last">I've Crafted</span>
+          </div>
+          <div className="projects-text-desc">
+            At the heart of my full-stack development and design philosophy is a
+            commitment to creating websites that are not only{" "}
+            <span className="light">visually-stunning</span>, but also{" "}
+            <span className="light">functional</span> and{" "}
+            <span className="light"> intuitive.</span>
+            <br />
+          </div>
+        </div>
+        <div className="projects-category">
+          <ProjectCategory categorySelected={categorySelected} changeCategory={(category)=>setCategorySelected(category)}/>
+        </div>
       </div>
+      {
+        categorySelected === "dev" &&
+      <div className="project-cards">
+        {devProjects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            tagline={project.tagline}
+            desc={project.desc}
+            projectClass={project.projectClass}
+            sideClass={project.sideClass}
+            siteLink={project.siteLink}
+            githubLink={project.githubLink}
+            projectType="develop"
+          />
+        ))}
+      </div>
+      }
+      {
+        categorySelected === "des" &&
+      <div className="project-cards">
+        {desProjects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            tagline={project.tagline}
+            desc={project.desc}
+            projectClass={project.projectClass}
+            sideClass={project.sideClass}
+            dribbbleLink={project.dribbbleLink}
+            figmaLink={project.figmaLink}
+            projectType="design"
+          />
+        ))}
+      </div>
+}
     </motion.div>
   );
 }

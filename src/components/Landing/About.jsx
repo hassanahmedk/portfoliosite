@@ -52,11 +52,12 @@ function About() {
         <div className="about-desc">
           I'm a <span>full-stack developer</span> specializing in building (and
           occasionally designing) exceptional digital experiences through
-          websites using the <span>MERN Stack</span> technologies. Currently,
-          I'm in my third year of Software Engineering at National University of
-          Sciences & Technology <span> (NUST) </span>.
+          websites using the <span>MERN Stack</span> technologies. Currently, I am pursuing my third year of studies in Software
+          Engineering at the esteemed National University of
+          Sciences & Technology <span> (NUST) </span>. 
+          
           <br />
-          <br />I stand on a sweet spot where <span>design</span> and{" "}
+          <br />I like to stand on the sweet spot where <span>design</span> and{" "}
           <span>code</span> intersects.
           <div className="about-buttons">
             <Link to="services">
