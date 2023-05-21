@@ -68,6 +68,7 @@ span.dark {
   justify-content: center;
   gap: 1rem 1rem;
   margin: 2rem 1rem;
+  width: 100%;
   padding-bottom: 5rem;
 }
 
@@ -459,9 +460,40 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
 
 
 
+@media (max-width: 1400px) {
+  .projects-text-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .projects-text-desc {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    margin: 2rem 10rem 0 10rem;
+
+  }
+}
 
 
+
+@media (max-width: 510px) {
+  .project-card {
+    scale: 0.85;
+  }
+
+}
 @media (max-width: 480px) {
+  .projects-text-heading {
+    font-size: 2.2rem;
+  }
+
+  .projects-text-desc {
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin: 2rem 2rem 0 2rem;
+
+  }
+
   .project-cards {
     gap: 0;
     margin: 0;
@@ -515,11 +547,19 @@ background-image: linear-gradient(to right, #42E794, #3BB2B8)
   .project-card:hover .card-head {
     height: 250%;
   }
+  .projects-text-heading {
+    font-size: 2rem;
+  }
+
 }
 @media (max-width: 355px) {
   .project-card {
     scale: 0.7;
     user-select: none;
     margin-bottom: -16%;
+  }
+
+  .projects-text-heading {
+    font-size: 1.7rem;
   }
 }
